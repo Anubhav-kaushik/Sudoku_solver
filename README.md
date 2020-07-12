@@ -1,2 +1,2 @@
-# Suduko_solver
+# Sudoku_solver
 A program which solve the suduko problem.
