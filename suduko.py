@@ -1,7 +1,6 @@
 # imported module
 import numpy as np
 import sys
-import time
 
 # inputs
 suduko_problem = np.array([[4, 0, 0, 3, 0, 0, 2, 1, 8],
@@ -20,7 +19,7 @@ suduko_problem = np.array([[4, 0, 0, 3, 0, 0, 2, 1, 8],
 # if len(inp) != 0:
 #     for row_ in range(9):
 #         for col, k in zip(range(9), range(9*i, 9*(i + 1))):
-#             suduko_puzzle[i, j] = int(inp[k])
+#             suduko_problem[i, j] = int(inp[k])
 
 
 # Functions
@@ -64,7 +63,7 @@ def possibility(suduko_puzzle):    # return two dict
             column = suduko_puzzle[:, c]
             box_r = r // 3
             box_c = c // 3
-            box = suduko_puzzle[0 + (3 * box_r): 3 + (3 * box_r), 0 + (3 * box_c): 3 + (3 * box_c)]
+            box = suduko_puzzle[3 * box_r: 3 + (3 * box_r), 3 * box_c: 3 + (3 * box_c)]
             if suduko_puzzle[r, c] == 0:
                 for i in range(1, 10):
                     if i not in row and i not in column and i not in box:
